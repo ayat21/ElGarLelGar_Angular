@@ -1,0 +1,191 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+ <style>
+ 
+
+    .btn5:hover{
+      background-color: darkcyan;
+      color: darkcyan;
+    }
+   .btn5{
+   
+border: none;
+color: white;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+
+   }
+   .nav-link :hover
+   {
+     color: darkcyan;
+   }
+      span {
+      color: rgb(8, 5, 5);
+      font-family: 'Vibes' ;
+      }
+      li
+       {
+         list-style-type: none;
+         margin-left: 1vw;
+       }
+
+       li:first-child
+       {
+         margin:0;
+       }
+
+       footer
+       {
+         padding-top: 5vh;
+         padding-bottom: 2vh;
+       }
+
+       .content
+       {
+         height: 50vh;
+         background-color: lightgray;
+       }
+
+
+
+       .copyright,  .impressum
+       {
+         text-align: center;
+       }
+
+       .logo
+       {
+         height: 8vh;
+       }
+
+       @media (max-width: 768px) 
+       {
+         li
+         {
+           margin-left: 0;
+           margin-bottom: 1vh;
+         }
+         
+         .sozial
+         {
+           margin-bottom: 1vh;
+         }
+       }
+   </style>
+</head>
+<body>
+   <!--Nav start-->
+   <nav class="navbar navbar-expand-lg navbar-light ">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#">
+            <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="main-nav" style="margin-left:750px ;">
+           <ul class="navbar-nav ml-auto"  >
+            
+             <li  class="nav-item ">
+               <a class="nav-link"routerLink="/index">
+                 <span><h3 >الصفحه الرئيسية </h3></span>
+               </a>
+           </li>
+             <li style="margin-right: 20px;"class="nav-item ">
+                 <a class="nav-link"routerLink="/news">
+                   <span><h3>اخر الاخبار </h3></span>
+                 </a>
+             </li>
+             
+             <li style="margin-right: 20px;" class="nav-item ">
+                 <a class="nav-link"routerLink="/skill">
+                   <span><h3>الحرف </h3></span>
+                 </a>
+             </li>
+             <li style="margin-right: 20px;"class="nav-item ">
+                 <a class="nav-link"routerLink="/request">
+                   <span><h3>الطلبات </h3></span>
+                 </a>
+             </li>
+             <li class="nav-item ">
+                 <a class="nav-link"routerLink="/neighbours">
+                   <span><h3>جيراني </h3></span>
+                 </a>
+             </li>
+             <li class="nav-item ">
+               <div class="dropdown">
+                 <a  data-toggle="dropdown">
+                   <h3><span><img src="/assets/5.jfif" width="60px"height="60px"class="rounded-circle"></span></h3>
+                 </a>
+                   <div class="dropdown-menu">
+                     <a class="dropdown-item" routerLink="/profile"><span>صفحتي</span></a>
+                     <a class="dropdown-item" routerLink="/profile"><span>خروج</span></a>
+                     <a class="dropdown-item" routerLink="/profile">setttings</a>
+                   </div>
+               </div>   
+             </li>              
+           </ul> 
+         </div>
+     </div>
+  </nav>
+  <!--Nav End-->
+  <!--Start Slider-->
+  <div class="container-fluid" style=" margin-bottom: 50px;">
+    <div class="row">
+      <img src="/assets/a.jfif" height="550px" width="100%">
+    </div>
+  </div>
+  <!--End Slider-->
+    <div class="container">
+        <div class="row text-right " style="margin-right: 300px;">
+             <div class="col-md-6"></div>
+            <div class="col-md-6 shadow-lg p-3 mb-5 bg-white rounded text-right" >
+              <form >
+                <div   class="col-xs-4" style="margin-left:150px ;">
+                  
+                  <input name="UserID" [(ngModel)]="newRequestID" hidden class="form-control input-sm"/>
+                  <input name="name" [(ngModel)]="newRequest.Content" class="form-control"/>
+                  
+               </div><br><br><br>
+               <button type="button"(click)="addRequest()" style="margin-right: 150px;" >أطلبه الان</button>
+              
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </form>
+            </div> 
+              
+        </div>
+        <div  style=" width: 600px; margin-left: 300px;"   >
+          <div style="text-align: right;" class="shadow-lg p-3 mb-5 bg-white rounded "  *ngFor="let request of RequestList$ | async">
+            <span style="margin-left: 5px; font-weight: bold; font-size: medium;">{{UserNAme}}</span>
+            <img  [src]="createImgPath(imgPath)"style="border-radius: 50%;width: 60px; height: 60px; ">
+            
+            <br><hr>
+            
+            <p >{{request.Content}} </p>
+
+                <button style="margin-top: 10px;" type="button" class="btn btn-secondary">طلبك عندي </button>
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+ 
+</html>

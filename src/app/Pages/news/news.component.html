@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+ 
+
+     .btn5:hover{
+       background-color: darkcyan;
+       color: darkcyan;
+     }
+    .btn5{
+    
+ border: none;
+ color: white;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+
+    }
+    .nav-link :hover
+    {
+      color: darkcyan;
+    }
+       span {
+       color: rgb(8, 5, 5);
+       font-family: 'Vibes' ;
+       }
+       li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+        li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!--Nav start-->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+             <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ml-auto" >
+              <li class="nav-item "  style="margin-right: 50px;">
+                  <div class="input-group mt-1 mb-1">
+                      <button style="width: 150px;" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                                            <span > بحث بالمنطقة</span></button>   
+                                            <ul class=" dropdown-menu" id="myList" >
+                                              <li class="list-group-item"> <a class="dropdown-item" href="#">Nasr Elnuba 1</a></li>
+                                              <li class="list-group-item">  <a class="dropdown-item" href="#">Aswan 2</a></li>
+                                              <li class="list-group-item"> <a class="dropdown-item" href="#">Edfu 3</a></li>
+                                              <li class="list-group-item"><a class="dropdown-item" href="#">KumAmbu 1</a></li>
+                                            </ul>
+                                            <input  style="width: 300px;"class="form-control" id="myInput" type="text" placeholder="Search..">
+                  </div>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link"routerLink="/index">
+                  <span><h3>الصفحه الرئيسية </h3></span>
+                </a>
+            </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/news">
+                    <span><h3>اخر الاخبار </h3></span>
+                  </a>
+              </li>
+              
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/skill">
+                    <span><h3>الحرف </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/request">
+                    <span><h3>الطلبات </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/neighbours">
+                    <span><h3>جيراني </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                <div class="dropdown">
+                  <a  data-toggle="dropdown">
+                    <h3><span><img src="/assets/5.jfif" width="60px"height="60px"class="rounded-circle"></span></h3>
+                  </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" routerLink="/profile"><span>صفحتي</span></a>
+                      <a class="dropdown-item" routerLink="/profile"><span>خروج</span></a>
+                      <a class="dropdown-item" routerLink="/profile">setttings</a>
+                    </div>
+                </div>   
+              </li>              
+            </ul> 
+          </div>
+      </div>
+   </nav>
+   <!--Nav End-->
+   <!--Start Slider-->
+   <div class="container-fluid" style=" margin-bottom: 50px;">
+     <div class="row">
+       <img src="/assets/a.jfif" height="550px" width="100%">
+     </div>
+   </div>
+   <!--End Slider-->
+
+   <!--Start Assets-->
+   <div class="container">
+     <div class="row">
+      <div class="col-md-10"></div>
+      <div   style="  padding-bottom: 30px;"class=" col-md-2">
+
+       <!-- Trigger the modal with a button -->
+       <button  type="button" 
+       class="btn btn-success btn-lg  " data-toggle="modal" 
+       data-target="#myModal">أضف شئ ما</button>
+        <!-- The Modal -->
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog"aria-labelledby="myModalLabel"
+        aria-hidden="true">>
+         <div class="modal-dialog modal-fluid" role="document">
+             <div class="modal-content">
+                 
+                 <!-- Modal Header -->
+                 <div class="modal-header">
+                     <h4 class="modal-title w-100"style="text-align: right;" >إضافة حدث ما</h4>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>
+ 
+                 <!-- Modal body -->
+                 <div class="modal-body">
+                     <div class="form-group">  
+                      <input type="number" name="UserID" [(ngModel)]="newNewstID" hidden/>
+                      <input type="string" name="Photo"[(ngModel)]="passedPhotoPath" hidden/>                      
+                         <input name="Content" [(ngModel)]="newNews.Content"type="text" style="text-align: right;"   placeholder="محتوي الحدث" >
+                     </div>
+                      <div class="form-group">
+                        <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+                      </div>
+                      
+                 </div>
+                 <!-- Modal footer -->
+                 <div class="modal-footer">
+                     <button type="button" class="btn  btn-labeled  btn-danger"  data-dismiss="modal">إغلاق</button>
+                     <button type="button"(click)="addNews()">أضف حدث</button>
+                 </div>
+ 
+             </div>
+         </div>
+     </div>
+ 
+      </div>
+     </div>
+      
+   </div>
+   <!--End Assets-->
+
+    <!--Start Assets-->
+    <div class="container">
+      <div class="row"*ngFor="let New of NewsList$ | async" >
+        <div class="col-md-2"></div>
+         <div class="col-md-8 shadow-lg p-3 mb-5 bg-white rounded" style="margin-top: 20px;"  >
+          <img  src="img/16.jpg" style="border-radius: 50%;width: 60px; height: 60px; margin-left: 650px;" >
+          <span style="margin-left: 5px; font-weight: bold; font-size: medium;">{{UserName}}</span>
+          <br><hr>
+          
+          <p style="text-align: right;">{{ New.Content}} </p>
+          <img [src]="createPhoto(New.Photo)" alt="Person" width="600px" height="300"><br>
+        
+         
+
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+    </div>
+    <!--End Assets-->
+
+    <!-- Footer -->
+    <div style="background-color: #ffffff; ">
+    
+        <footer class="row">
+        <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
+            <ul class="row">
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
+                </a>
+            </li>
+            </ul>
+        </div><!-- Ende Sozial media -->
+        
+        <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+            <p> &copy; Me from now to eternity </p>
+        </div><!-- Ende Copyright -->
+        
+        <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+            <p> An impressive impressum </p>
+            <p> Adresse und so </p>
+        </div><!-- Ende Impressum -->
+        </footer>
+    </div>
+    <!-- Footer -->
+
+
+    <script>
+       $(document).ready(function(){
+         $("#myInput").on("keyup", function() {
+           var value = $(this).val().toLowerCase();
+           $("#myList li").filter(function() {
+             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+           });
+         });
+       });
+       </script>
+</body>
+</html>

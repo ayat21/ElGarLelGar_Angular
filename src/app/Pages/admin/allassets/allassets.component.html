@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+        span {
+        color: rgb(8, 5, 5);
+        font-family: 'Vibes' ;
+        }
+        li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+</style>
+</head>
+<body>
+   <!--Nav start-->
+   <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+           <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ml-auto" >
+           
+            <li class="nav-item ">
+              <a class="nav-link"routerLink="/admin">
+                <span><h3>الصفحه الرئيسية </h3></span>
+              </a>
+            </li>
+            
+            
+            <li class="nav-item ">
+              <div class="dropdown">
+                <a  data-toggle="dropdown">
+                  <h3><span><img src="/assets/5.jfif" width="60px"height="60px"class="rounded-circle"></span></h3>
+                </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" ><span><img [src]="createPhoto(currentUser.Photo)"width="60px"height="60px"class="rounded-circle"></span></a>
+                    <a class="dropdown-item" (click)="logout()"><span>خروج</span></a>
+                  </div>
+              </div>   
+            </li>              
+          </ul> 
+        </div>
+    </div>
+ </nav>
+ <!--Nav End-->
+     <div class="row">
+      <div class="col-md-3"*ngFor="let asset of AssetList$| async">
+      
+
+         <div style="background-color: rgb(245, 232, 206);">
+         <p class="badge badge-pill badge-dark">جديد</p>
+           
+           <img img [src]="createPhoto(asset.Photo)" width="100px" height="280px"class="card-img-top" alt="...">
+         </div>
+         <div class="card-body text-center" >
+           <h5 class="card-title">{{ asset.Name }}</h5>
+           <p class="card-text">{{ asset.Price }}</p>
+           
+             
+           
+        
+       </div>
+      </div>
+      
+    </div>
+
+      <!-- Footer -->
+   <div style="background-color: #ffffff; ">
+    
+    <footer class="row">
+      <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
+        <ul class="row">
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
+            </a>
+          </li>
+        </ul>
+      </div><!-- Ende Sozial media -->
+      
+      <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> &copy; Me from now to eternity </p>
+      </div><!-- Ende Copyright -->
+      
+      <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> An impressive impressum </p>
+        <p> Adresse und so </p>
+      </div><!-- Ende Impressum -->
+    </footer>
+  </div>
+  <!-- Footer -->
+</body>
+</html>

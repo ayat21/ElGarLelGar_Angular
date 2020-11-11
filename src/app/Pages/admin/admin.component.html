@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lalezar|Scheherazade|Tajawal&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Scheherazade|Tajawal&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<style>
+  a:hover{
+       cursor: pointer;
+     }
+      .btn5:hover{
+       
+        color: darkcyan;
+      }
+     .btn5{
+     
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Tajawal' ;
+     }
+     .nav-link :hover
+     {
+       color: darkcyan;
+     }
+     .quot{
+       font-weight: bold;
+     }
+     
+.zoom {
+
+  transition: transform 1s;
+  opacity: 0.6;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.2); 
+  opacity: 1.0;
+}
+li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+        span {
+        color: rgb(8, 5, 5);
+        font-family: 'Vibes' ;
+        }
+        li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+</style>
+<body>
+  <!--Navbar-->
+  <div class="container-fluid" >
+   <!--Nav start-->
+   <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+           <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="navbar-nav ml-auto" >
+           
+            <li class="nav-item ">
+              <a class="nav-link"routerLink="/admin">
+                <span><h3>الصفحه الرئيسية </h3></span>
+              </a>
+            </li>
+            
+            
+            <li class="nav-item ">
+              <div class="dropdown">
+                <a  data-toggle="dropdown">
+                  <h3><span><img src="/assets/5.jfif" width="60px"height="60px"class="rounded-circle"></span></h3>
+                </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" ><span><img [src]="createPhoto(currentUser.Photo)"width="60px"height="60px"class="rounded-circle"></span></a>
+                    <a class="dropdown-item" (click)="logout()"><span>خروج</span></a>
+                  </div>
+              </div>   
+            </li>              
+          </ul> 
+        </div>
+    </div>
+ </nav>
+ <!--Nav End-->
+  </div>
+  <!--Navbar-->
+  <!--divat-->
+  <div class="container" style="margin-bottom: 80px;">
+    <div class="row ">
+      <div class="col-md-6 zoom" style="margin-top: 70px; ">
+        <h3 class="text-center">الحرف</h3>
+       <a  routerLink="/allskills" > <img src=" /assets/197.jfif" width="500px" height="200px" ></a>
+      </div>
+      <div class="col-md-6 zoom"style="margin-top: 70px;" >
+        <h3 class="text-center">الاشياء</h3>
+        <a  routerLink="/allassets" > 
+            <img src="/assets/19 (36).jfif" width="500px" height="200px" >
+         </a>
+
+      </div>
+     
+    </div>
+    <div class="row ">
+      <div class="col-md-4 zoom" style=" margin-top: 60px; ">
+        <h3 class="text-center">أهم الاحداث</h3>
+        <a  routerLink="/allnews" >
+         <img src="/assets/123.jfif" width="310px" height="282px">
+        </a>
+
+      </div>
+      <div class="col-md-4 zoom" style=" margin-top: 60px; ">
+        <h3 class="text-center">المستخدمون</h3>
+        <a  routerLink="/allusers" >
+           <img src="/assets/1234.jfif" width="310px" height="282px"  >
+        </a>
+    </div>
+    <div class="col-md-4 zoom" style=" margin-top: 60px; ">
+        <h3 class="text-center">الطلبات</h3>
+        <a  routerLink="/allrequests" >
+      <img src="/assets/12345.jfif" width="310px" height="282px" >
+      </a>
+
+  </div>
+    </div>
+  </div>
+   <!--divat-->
+   <!-- Footer -->
+   <div style="background-color: #ffffff; ">
+    
+    <footer class="row">
+      <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
+        <ul class="row">
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
+            </a>
+          </li>
+          <li class="col-xs-6 col-sm-2">
+            <a href="#">
+              <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
+            </a>
+          </li>
+        </ul>
+      </div><!-- Ende Sozial media -->
+      
+      <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> &copy; Me from now to eternity </p>
+      </div><!-- Ende Copyright -->
+      
+      <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+        <p> An impressive impressum </p>
+        <p> Adresse und so </p>
+      </div><!-- Ende Impressum -->
+    </footer>
+  </div>
+  <!-- Footer -->
+
+   
+</body>
+</html>

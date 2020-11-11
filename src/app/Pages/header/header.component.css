@@ -1,0 +1,15 @@
+ .nav-item .active
+ {
+     color :darkslategrey;
+ }
+.nav-item  a
+{
+    display: block;
+    color: teal;
+    transition: all ease .7s;
+}
+.nav-item :hover{
+    color: rgba(7, 80, 80, 0.424);
+    text-transform: uppercase;
+
+}

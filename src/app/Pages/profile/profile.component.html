@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <style>
+      a:hover{
+       cursor: pointer;
+     }
+      .btn5:hover{
+        background-color: darkcyan;
+        color: darkcyan;
+      }
+     .btn5{
+     
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+
+     }
+     .nav-link :hover
+     {
+       color: darkcyan;
+     }
+        span {
+        color: rgb(8, 5, 5);
+        font-family: 'Vibes' ;
+        }
+        li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+        li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+      body {
+ /* background-image: url("./assets/a.jfif"); */
+ background-color: azure;
+ background-size: cover;
+ 
+}
+       .avatar1 {
+vertical-align: middle;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-left: auto;
+}
+.tw{
+  vertical-align: middle;
+width: 20px;
+height: 20px;
+border-radius: 20%;
+}
+.get{
+  vertical-align: middle;
+width: 20px;
+height: 20px;
+border-radius: 20%;
+}
+.face{
+  vertical-align: middle;
+width: 20px;
+height: 20px;
+border-radius: 20%;
+}
+.footer{
+  margin-top: 400px;
+  margin-left: 75px;
+
+}
+  .icon-bar{
+      background:darkred;
+  }
+  </style>
+  <script>
+      $(document).ready(function() {
+
+  
+var readURL = function(input) {
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+          $('.avatar').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
+$(".file-upload").on('change', function(){
+  readURL(this);
+});
+});
+
+$(document).ready(function(){
+$("#mytable #checkall").click(function () {
+      if ($("#mytable #checkall").is(':checked')) {
+          $("#mytable input[type=checkbox]").each(function () {
+              $(this).prop("checked", true);
+          });
+
+      } else {
+          $("#mytable input[type=checkbox]").each(function () {
+              $(this).prop("checked", false);
+          });
+      }
+  });
+  
+  $("[data-toggle=tooltip]").tooltip();
+});
+
+  </script>
+  </head>
+<body>
+     <!--Nav start-->
+     <div class="container-fluid"style="background-color: white;">
+     <nav class="navbar navbar-expand-lg "   >
+     
+          <a class="navbar-brand" href="#">
+             <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  "  style="margin-left: 650px;" id="main-nav">
+            <ul class="navbar-nav ml-auto "  >
+               
+              <li class="nav-item ">
+                <a class="nav-link"routerLink="/index">
+                  <span><h3>الصفحه الرئيسية </h3></span>
+                </a>
+            </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/news">
+                    <span><h3>اخر الاخبار </h3></span>
+                  </a>
+              </li>
+              
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/skill">
+                    <span><h3>الحرف </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/request">
+                    <span><h3>الطلبات </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/neighbours">
+                    <span><h3>جيراني </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                <div class="dropdown">
+                  <a  data-toggle="dropdown">
+                    <h3><span><img  [src]="createPhoto(currentUser.Photo)" width="60px"height="60px"class="rounded-circle"></span></h3>
+                  </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" routerLink="/profile"><span> {{currentUser.Name}}</span></a>
+                      <a class="dropdown-item" (click)="logout()"><span>خروج</span></a>
+      
+                    </div>
+                </div>   
+              </li>              
+            </ul> 
+          </div>
+        </nav>
+        </div>
+ 
+   <!--Nav End-->
+  
+   <div class="container bootstrap snippet">
+       <div class="row">
+             <div class="col-sm-10"><h1 style="margin-left: 65px; color: rgb(91, 139, 211);">اسم المستخدم</h1></div>
+       </div>
+       <div class="row">
+             <div class="col-sm-3"><!--left col-->
+             <div class="text-center">
+           <img [src]="createPhoto(currentUser.Photo)"  class="avatar img-circle img-thumbnail" alt="avatar">
+           <br><br>
+           <input type="file" class="text-center center-block file-upload" style="margin-left: 10px; background-color: rgb(192, 202, 202);">
+             </div><br> 
+           </div><!--/col-3-->
+           <div class="col-sm-9">
+               <ul class="nav nav-tabs">
+                   <li class="active" style="font-size: large;"><a data-toggle="tab" href="#home">الملف الشخصي</a></li>
+                   <li style="font-size: large;"><a data-toggle="tab" href="#messages"> اغراض قمت باضافتها</a></li>
+                   <li style="font-size: large;"><a data-toggle="tab" href="#settings">حرف قمت باضافتها</a></li>
+                   <li style="font-size: large;"><a data-toggle="tab" href="#assets">الاغراض المطلوبة</a></li>
+                   <li style="font-size: large;"><a data-toggle="tab" href="#skills">الحرف المطلوبة</a></li>
+                 </ul>      
+             <div class="tab-content">
+               <div class="tab-pane active" id="home">
+                   <hr>
+                   <form class="form" action="##" method="post" id="registrationForm" [formGroup]="formModel" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+                    <div class="form-group">
+                        
+                        <div class="col-xs-12">
+                            <label for="first_name"><h4> الاسم </h4></label>
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="الاسم" title="ادخل الاسم" formControlName="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="sel1" style=" margin-left: 20px; margin-top: 10px;">المدينة</label>
+                      <select formControlName="City"  [(ngModel)]="SelCityId" (change)="FillStateDDL();"id="inputState" class="form-control" id="sel1" style="width: 96%; margin-left: 15px; margin-top: 10px;">
+                        <option > Choose...</option>
+                        <option *ngFor="let City of _allCity | async"
+                         value={{City.CityID}} style="color: black;">
+                         {{City.CityName}}</option>
+                      </select>
+                    </div>
+        
+                    <div class="form-group">
+                      <label for="sel1" style=" margin-left: 20px; margin-top: 10px;">المنطقة</label>
+                      <select formControlName="Area"  [(ngModel)]="SelAreaId" (change)="FillStreetDDL();" id="inputState" class="form-control" id="sel1" style="width: 96%; margin-left: 15px; margin-top: 10px;">
+                        <option> Choose...</option>
+                        <option *ngFor="let Area of _allArea | async" value={{Area.AreaID}}>{{Area.AreaName}}</option>
+                       
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="sel1" style=" margin-left: 20px; margin-top: 10px;">الشارع</label>
+                      <select formControlName="Street"id="inputState" class="form-control" id="sel1" style="width: 96%; margin-left: 15px; margin-top: 10px;">
+                        <option> Choose...</option>
+                        <option *ngFor="let Street of _allStreet | async" value={{Street.StreetID}}>{{Street.StreetName}}</option>
+      
+                       
+                      </select>
+                    </div>
+        
+                    
+                    <div class="form-group">
+                        
+                        <div class="col-xs-12">
+                            <label for="email"><h4> الايميل </h4></label>
+                            <input type="email" class="form-control " name="email" id="email" placeholder="you@email.com" title=" ادخل الايميل " formControlName="Email">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        
+                        <div class="col-xs-6">
+                            <label for="password"><h4> الرقم السري </h4></label>
+                            <input type="password" class="form-control " name="password" id="password" placeholder="الرقم السري " title="ادخل الرقم السري" formControlName="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+                        <div class="col-xs-6">
+                          <label for="password2"><h4> تاكيد الرقم السري </h4></label>
+                            <input type="password" class="form-control" name="password2" id="password2" placeholder="تاكيد الرقم السري" title="ادخل الرقم السري مرة اخري" formControlName="ConfirmPassword">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                         <div class="col-xs-12">
+                              <br>
+                                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> حفظ </button>
+                                 
+                          </div>
+                    </div>
+                </form>
+                 <hr>
+               
+
+
+
+
+
+                </div><!--/tab-content-->
+                <div class="tab-pane" id="messages">
+                  
+                  <h2></h2>
+                  
+                  <hr>
+                  <app-add-asset></app-add-asset>
+                </div>
+                <div class="tab-pane" id="settings">
+                  
+                  <h2></h2>
+                  
+                  <hr>
+                  <app-add-skill></app-add-skill>
+                </div>
+                <div class="tab-pane" id="assets">
+                  
+                  <h2></h2>
+                  
+                  <hr>
+                  <!-- <app-show-asset></app-show-asset> -->
+                </div>
+                <div class="tab-pane" id="skills">
+                  
+                  <h2></h2>
+                  
+                  <hr>
+                  <!-- <app-show-skill></app-show-skill> -->
+                </div>
+            </div><!--/col-9-->
+        </div><!--/row-->
+                                                          
+ 
+    </div>
+                                                            
+   
+      </div>
+      <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myList li").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+   

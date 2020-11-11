@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+  a:hover{
+       cursor: pointer;
+     }
+      .btn5:hover{
+        background-color: darkcyan;
+        color: darkcyan;
+      }
+     .btn5{
+     
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+
+     }
+     .nav-link :hover
+     {
+       color: darkcyan;
+     }
+        span {
+        color: rgb(8, 5, 5);
+        font-family: 'Vibes' ;
+        }
+        li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+        li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+
+     .btn5:hover{
+       background-color: darkcyan;
+       color: darkcyan;
+     }
+    .btn5{
+    
+ border: none;
+ color: white;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+
+    }
+    .nav-link :hover
+    {
+      color: darkcyan;
+    }
+       .span {
+       color: rgb(8, 5, 5);
+       font-family: 'Vibes' ;
+       }
+       li
+        {
+          list-style-type: none;
+          margin-left: 1vw;
+        }
+
+        li:first-child
+        {
+          margin:0;
+        }
+
+        footer
+        {
+          padding-top: 5vh;
+          padding-bottom: 2vh;
+        }
+
+        .content
+        {
+          height: 50vh;
+          background-color: lightgray;
+        }
+
+
+
+        .copyright,  .impressum
+        {
+          text-align: center;
+        }
+
+        .logo
+        {
+          height: 8vh;
+        }
+
+        @media (max-width: 768px) 
+        {
+          li
+          {
+            margin-left: 0;
+            margin-bottom: 1vh;
+          }
+          
+          .sozial
+          {
+            margin-bottom: 1vh;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!--Nav start-->
+    <nav class="navbar navbar-expand-lg navbar-light "   >
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+             <img src="assets/LogoSample_ByTailorBrands (3).jpg"style="width:140px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav ml-auto" >
+              
+              <li class="nav-item ">
+                <a class="nav-link"routerLink="/index">
+                  <span><h3>الصفحه الرئيسية </h3></span>
+                </a>
+            </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/news">
+                    <span><h3>اخر الاخبار </h3></span>
+                  </a>
+              </li>
+              
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/skill">
+                    <span><h3>الحرف </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/request">
+                    <span><h3>الطلبات </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link"routerLink="/neighbours">
+                    <span><h3>جيراني </h3></span>
+                  </a>
+              </li>
+              <li class="nav-item ">
+                <div class="dropdown">
+                  <a  data-toggle="dropdown">
+                    <h3><span><img src="/assets/5.jfif" width="60px"height="60px"class="rounded-circle"></span></h3>
+                  </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" routerLink="/profile"><span>{{currentUser.Name}}</span></a>
+                      <a class="dropdown-item" (click)="logout()"><span>خروج</span></a>
+                      <a class="dropdown-item" routerLink="/profile">setttings</a>
+                    </div>
+                </div>   
+              </li>              
+            </ul> 
+          </div>
+      </div>
+   </nav>
+   <!--Nav End-->
+    <!--Start Slider-->
+    <div class="container-fluid" style="margin-bottom: 50px;">
+      <div class="row">
+        <img src="/assets/1.jfif" height="350px" width="100%">
+
+      </div>
+    </div>
+    <!--End Slider-->
+
+    <!--Start Assets-->
+ 
+        <div class="container">
+            <div class="row" >
+                <div class="col-md-6">
+                    <div *ngFor="let nieghbour of nieghbourList$| async" class="card shadow p-3 mb-5 bg-white rounded" >
+                        <div class="row no-gutters text-right">
+                        <div class="col-md-3" style="margin-top: 20px;">
+                                 
+                            <i style="font-size:24px" class="fa">&#xf006;</i>
+                            <i style="font-size:24px" class="fa">&#xf006;</i>
+                            <i style="font-size:24px" class="fa">&#xf006;</i>
+                            <i style="font-size:24px" class="fa">&#xf006;</i>
+                            <i style="font-size:24px" class="fa">&#xf006;</i>
+                        </div>
+                          <div class="col-md-5">
+                            <div class="card-body">
+                                <h5 class="card-title" >{{nieghbour.usrName}}</h5>
+                                <div style="margin-top: 5px;"> المدينة : <span >{{nieghbour.city}}</span></div>
+                                <div style="margin-top: 5px;">  المنطقة: <span >{{nieghbour.area}}</span></div>
+                                <div style="margin-top: 5px;">   الشارع: <span >{{nieghbour.street}}</span></div> 
+
+                            </div>
+                          </div>
+                          <div class="col-md-4" style="background-color: rgba(238, 247, 247, 0.575);">
+                            <img [src]="createPhoto(nieghbour.usrPhoto)" width="60px"height="60px"class="rounded-circle" class="card-img" width="100px" height="200px" alt="...">
+                          </div>
+                        </div>
+                      </div>  
+    
+                </div> 
+            <div class="col-md-6">
+                <div class="card shadow p-3 mb-5 bg-white rounded" >
+                    <div class="row no-gutters text-right">
+                    <div class="col-md-3" style="margin-top: 20px;">
+                             
+                        <i style="font-size:24px" class="fa">&#xf006;</i>
+                        <i style="font-size:24px" class="fa">&#xf006;</i>
+                        <i style="font-size:24px" class="fa">&#xf006;</i>
+                        <i style="font-size:24px" class="fa">&#xf006;</i>
+                        <i style="font-size:24px" class="fa">&#xf006;</i>
+                    </div>
+                      <div class="col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title" >أيات حسام الدين </h5>
+                            <div style="margin-top: 5px;"> المدينة : <span >اسوان</span></div>
+                            <div style="margin-top: 5px;">  المنطقة: <span >اسوان</span></div>
+                            <div style="margin-top: 5px;">   الشارع: <span >اسوان</span></div>
+                        </div>
+                      </div>
+                      <div class="col-md-4" style="background-color: rgba(238, 247, 247, 0.575);">
+                        <img src="/assets/main_chair.png" class="card-img" width="100px" height="200px" alt="...">
+                      </div>
+                    </div>
+                  </div>  
+
+            </div>  
+          </div>       
+      </div>
+    <!--End Assets-->
+
+    <!-- Footer -->
+    <div style="background-color: #ffffff; ">
+    
+        <footer class="row">
+        <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
+            <ul class="row">
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
+                </a>
+            </li>
+            <li class="col-xs-6 col-sm-2">
+                <a href="#">
+                <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
+                </a>
+            </li>
+            </ul>
+        </div><!-- Ende Sozial media -->
+        
+        <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+            <p> &copy; Me from now to eternity </p>
+        </div><!-- Ende Copyright -->
+        
+        <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+            <p> An impressive impressum </p>
+            <p> Adresse und so </p>
+        </div><!-- Ende Impressum -->
+        </footer>
+    </div>
+    <!-- Footer -->
+
+
+    <script>
+       $(document).ready(function(){
+         $("#myInput").on("keyup", function() {
+           var value = $(this).val().toLowerCase();
+           $("#myList li").filter(function() {
+             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+           });
+         });
+       });
+       </script>
+</body>
+</html>
